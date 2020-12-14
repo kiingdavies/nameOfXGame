@@ -1,10 +1,22 @@
 const express = require("express");
-const jwt = require("jsonwebtoken"); // for login verification
+// const jwt = require("jsonwebtoken"); // for login verification
 const router = express.Router();
 const path = require('path');
-// const User = require("../models/user");
 const mongoose = require("mongoose");
 const db = ""; 
+const jwt = require("jsonwebtoken"); // for login verification
+
+require('../dbConfig');
+
+//import bcrypt for password hashing
+const bcrypt = require('bcrypt');
+const session = require('express-session');
+const flash = require('express-flash');
+// const passport = require('passport');
+
+// const initializePassport = require('../passportConfig');
+
+// initializePassport(passport);
 
 // this routes to http://localhost:3000/api
 router.get("/", (req, res) => {
