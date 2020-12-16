@@ -1,0 +1,71 @@
+<!-- Material form register -->
+<div class="row pt-5">
+  <mdb-card class="col-md-6 mx-auto">
+
+    <mdb-card-header class="purple lighten-1 white-text text-center py-4">
+      <h5>
+        <strong>Sign up</strong>
+      </h5>
+    </mdb-card-header>
+  
+    <!--Card content-->
+    <mdb-card-body class="px-lg-5 pt-0">
+  
+      <!-- Form -->
+      <form class="text-center" style="color: #757575;">
+  
+  
+        <!-- E-mail -->
+        <div class="md-form mt-0">
+          <input [(ngModel)]="registerUserData.email" name="email" type="email" id="materialRegisterFormEmail" class="form-control" mdbInput>
+          <label for="materialRegisterFormEmail">E-mail</label>
+        </div>
+  
+        <!-- Password -->
+        <div class="md-form">
+          <input [(ngModel)]="registerUserData.password" name="password" type="password" id="materialRegisterFormPassword" class="form-control" aria-describedby="materialRegisterFormPasswordHelpBlock"
+            mdbInput>
+          <label for="materialRegisterFormPassword">Password</label>
+          <small id="materialRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+            At least 8 characters and 1 digit
+          </small>
+        </div>
+  
+        <!-- Newsletter -->
+        <mdb-checkbox>Subscribe to our newsletter</mdb-checkbox>
+  
+        <!-- Sign up button -->
+        <button (click)="registerUser()" mdbBtn color="info" outline="true" rounded="true" block="true" class="my-4 waves-effect z-depth-0" mdbWavesEffect
+          type="submit">Register</button>
+  
+        <!-- Social register -->
+        <p>or sign up with:</p>
+  
+        <a type="button" class="light-blue-text mx-2">
+          <mdb-icon fab icon="facebook"></mdb-icon>
+        </a>
+        <a type="button" class="light-blue-text mx-2">
+          <mdb-icon fab icon="twitter"></mdb-icon>
+        </a>
+        <a type="button" class="light-blue-text mx-2">
+          <mdb-icon fab icon="linkedin"></mdb-icon>
+        </a>
+        <a type="button" class="light-blue-text mx-2">
+          <mdb-icon fab icon="heart"></mdb-icon>
+        </a>
+  
+        <hr>
+  
+        <!-- Terms of service -->
+        <p>By clicking
+          <em>Sign up</em> you agree to our
+          <a href="" target="_blank">terms of service</a>. </p>
+  
+      </form>
+      <!-- Form -->
+  
+    </mdb-card-body>
+  
+  </mdb-card>
+  <!-- Material form register -->
+</div>
