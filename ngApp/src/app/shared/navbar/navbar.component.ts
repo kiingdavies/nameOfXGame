@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthService } from './../../auth.service';
+
 
 
 @Component({
@@ -8,14 +10,16 @@ import { AuthService } from './../../auth.service';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
+  
 
-  constructor(private _authService: AuthService) { }
+  constructor(private _authService: AuthService, private _router: Router) { }
 
   ngOnInit(): void {
   }
 
   // this function calls the loggedin method in auth.service
   login() {
+
     return this._authService.loggedIn();
   }
 

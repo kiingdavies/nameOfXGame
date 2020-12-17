@@ -12,11 +12,14 @@ import { UserService } from './user.service';
 import { TokenInterceptorService } from './token-interceptor.service';
 import { AuthGuard } from './auth.guard';
 // import { TokenInterceptorService } from './token-interceptor.service';
+import { NgxSpinnerModule } from "ngx-spinner"; 
 
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { LoginComponent } from './user-pages/login/login.component';
 import { RegisterComponent } from './user-pages/register/register.component';
 import { DashboardComponent } from './user-pages/dashboard/dashboard.component';
+import { SpinnerComponent } from './shared/spinner/spinner.component';
+import { UserProfileComponent } from './user-pages/user-profile/user-profile.component';
 
 
 @NgModule({
@@ -25,12 +28,15 @@ import { DashboardComponent } from './user-pages/dashboard/dashboard.component';
     NavbarComponent,
     LoginComponent,
     RegisterComponent,
-    DashboardComponent
+    DashboardComponent,
+    SpinnerComponent,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
+    NgxSpinnerModule,
     AppRoutingModule,
     MDBBootstrapModule.forRoot()
   ],
